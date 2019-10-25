@@ -3,7 +3,7 @@ window.onload = function () {
     let n = 0;
     let clipboard = new ClipboardJS('#copy');
     document.getElementById('src').onkeyup = function (e) {
-        if(/^[a-zA-Zа-яА-ЯЁё]$/.test(e.key)) {
+        if(/^[0-9a-zA-Zа-яА-ЯЁё\-,.!?+@#%*\/\\]$/.test(e.key)) {
             document.getElementById('dest').value = sArCasTInaTioN(this.value);
         }
         if (this.value.length > 0) {
