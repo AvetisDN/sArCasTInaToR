@@ -1,0 +1,88 @@
+html, body {
+    background-color: #e9eaeb;
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 16px;
+    color: #678;
+}
+textarea {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #345;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    padding: 15px 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+    outline: none;
+    transition: 300ms ease;
+    background-color: #fff;
+    margin-top: 20px;
+}
+textarea:focus {
+    border-radius: 5px;
+    border: 1px solid #999999;
+    box-shadow: none;
+    outline: none;
+}
+textarea[readonly]{
+    background-color: #f5f5f5;
+    user-select: none;
+}
+textarea[readonly]::selection {
+    background-color: #f5f5f5;
+    color: #345;
+}
+button {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    padding: 10px 0;
+    text-align: center;
+    width: 200px;
+    background-color: #ff3a26;
+    color: #ffffff;
+    border: 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 200ms ease;
+}
+button#copied {
+    background-color: #0ec34e;
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scaleY(0);
+}
+button#copied.show {
+    transform: scaleY(1);
+    opacity: 1;
+}
+button:hover {
+    background-color: #ff180e;
+}
+button:disabled {
+    background-color: #ff836d;
+    cursor: default;
+}
+h1 {
+    font-weight: normal;
+    font-size: 3rem;
+    margin: 5px 0 20px;
+}
+.container {
+    position: relative;
+    max-width: 900px;
+    margin: 15px auto;
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,.2) 0 5px 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
