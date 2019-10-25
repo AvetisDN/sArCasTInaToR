@@ -43,7 +43,7 @@ button {
     right: 25px;
     padding: 10px 0;
     text-align: center;
-    width: 200px;
+    width: 140px;
     background-color: #ff3a26;
     color: #ffffff;
     border: 0;
@@ -85,4 +85,9 @@ h1 {
     text-align: center;
     box-sizing: border-box;
     padding: 20px;
+}
+#sarc {
+    background-color: #c36cff;
+    /*display: none;*/
+    right: 170px;
 }

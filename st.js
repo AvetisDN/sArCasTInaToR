@@ -3,15 +3,9 @@ window.onload = function () {
     let n = 0;
     let clipboard = new ClipboardJS('#copy');
     document.getElementById('src').addEventListener('keyup',lOl);
-    document.getElementById('src').addEventListener('input',lOl);
     function lOl(e) {
         if(/^[0-9a-zA-Zа-яА-ЯЁё\-,.!?+@#%*\/\\]$/.test(e.key)) {
             document.getElementById('dest').value = sArCasTInaTioN(this.value);
-        }
-        if (this.value.length > 0) {
-            document.getElementById('copy').removeAttribute('disabled');
-        } else {
-            document.getElementById('copy').setAttribute('disabled', 'disabled');
         }
     }
     function sArCasTInaTioN(text) {
@@ -40,5 +34,10 @@ window.onload = function () {
         }, 2000);
         e.clearSelection();
     });
+
+    document.getElementById('sarc').style.display = 'block';
+    document.getElementById('sarc').onclick = function (e) {
+        document.getElementById('dest').value = sArCasTInaTioN(document.getElementById('src').value);
+    }
 
 };
