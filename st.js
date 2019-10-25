@@ -2,7 +2,9 @@ window.onload = function () {
     let k = 0;
     let n = 0;
     let clipboard = new ClipboardJS('#copy');
-    document.getElementById('src').onkeyup = function (e) {
+    document.getElementById('src').addEventListener('keyup',lOl);
+    document.getElementById('src').addEventListener('input',lOl);
+    function lOl(e) {
         if(/^[0-9a-zA-Zа-яА-ЯЁё\-,.!?+@#%*\/\\]$/.test(e.key)) {
             document.getElementById('dest').value = sArCasTInaTioN(this.value);
         }
@@ -11,7 +13,7 @@ window.onload = function () {
         } else {
             document.getElementById('copy').setAttribute('disabled', 'disabled');
         }
-    };
+    }
     function sArCasTInaTioN(text) {
         let result = '';
         [...text].forEach(c => {
